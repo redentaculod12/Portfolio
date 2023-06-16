@@ -77,9 +77,12 @@
   }
 
   function displayError(thisForm, error) {
-    thisForm.querySelector('.loading').classList.remove('d-block');
-    thisForm.querySelector('.error-message').innerHTML = error;
-    thisForm.querySelector('.error-message').classList.add('d-block');
+	if(error == "Error:1"){
+		thisForm.querySelector('.loading').classList.remove('d-block');
+		thisForm.querySelector('.error-message').innerHTML = "Succesful";
+		thisForm.querySelector('.error-message').classList.add('d-block');
+	}
+    
   }
 
 })();
